@@ -1,0 +1,48 @@
+html {
+    --bg-primary: #f0f0ef;
+    --bg-dark: #1c1b1b;
+}
+
+body {
+    background-color: var(--bg-primary);
+    border-top: 13px solid var(--bg-dark);
+}
+
+.bg-dark {
+    background-color: var(--bg-dark);
+    color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+}
+
+p,
+span,
+ul,
+li {
+    font-family: 'ibm plex sans', sans-serif;
+    @apply leading-7;
+}
+
+.page-width {
+    @apply w-9/12 max-w-screen-md;
+}
+
+.nuxt-content h1,
+.nuxt-content h2,
+.nuxt-content h3,
+.nuxt-content h4,
+.nuxt-content h5,
+.nuxt-content h6 {
+    @apply mt-8 mb-2;
+}
+
+.nuxt-content p {
+    @apply my-3;
+}
