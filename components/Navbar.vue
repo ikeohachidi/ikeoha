@@ -6,7 +6,7 @@
     </ul>
 </template>
 
-<style lang="postcss">
+<style lang="postcss" scoped>
 ul {
     @apply flex py-4;
 }
