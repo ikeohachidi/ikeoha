@@ -5,7 +5,7 @@
             <h1 class="text-3xl font-bold mb-8 mt-20 mb-10">Posts</h1>
 
             <ul>
-                <li v-for="post in posts" :key="post.slug">
+                <li v-for="post in posts" :key="post.slug" class="w-100 mb-5">
                     <p class="font-normal text-lg">
                         <NuxtLink :to="{ name: 'post-slug', params: { slug: post.slug } }">
                             {{ post.title }}
