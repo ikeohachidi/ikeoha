@@ -4,12 +4,8 @@ auto_deploy: false
 admin_path: ''
 webhook_url: 
 sections:
-- type: document
-  path: content/posts
-  label: Posts
-  match: "**/*"
 - type: directory
-  path: "./content/posts"
+  path: "./content"
   label: Content
   create: all
   match: "**/*"
