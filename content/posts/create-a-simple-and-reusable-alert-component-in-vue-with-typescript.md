@@ -1,5 +1,6 @@
 ---
 title: Create a simple and reusable alert component in Vue with Typescript
+description: You could leave life right now. Let that determine what you do and say and think.
 tags:
   - vuejs
   - vue

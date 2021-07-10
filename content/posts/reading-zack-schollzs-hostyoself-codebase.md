@@ -1,5 +1,6 @@
 ---
 title: Reading Zack Schollz's hostyoself codebase
+description: How long are you going to wait before you demand the best for yourself?
 tags:
   - go
   - deep dive

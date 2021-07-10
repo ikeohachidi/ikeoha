@@ -13,7 +13,7 @@
                         <span class="text-gray-500 text-xs italic ml-3">{{ timeFormat(post.date) }}</span>
                     </p>
                     
-                    <p class="text-gray-700 font-normal">{{ post.description }}</p>
+                    <p class="text-gray-700 text-base font-normal">{{ post.description }}</p>
                 </li>
             </ul>
         </div>

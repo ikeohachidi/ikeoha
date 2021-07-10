@@ -1,5 +1,6 @@
 ---
 title: Use Namecheap domain with EC2 instance with Route53.
+description: You never know where life may take you
 tags:
   - aws
   - devops

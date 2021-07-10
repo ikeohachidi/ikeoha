@@ -1,5 +1,6 @@
 ---
 title: Concurrency for the layman
+description: Waste no more time arguing what a good man should be. Be one.
 tags: [Go, concurrency]
 date: 2021-09-10T15:58:10.944Z
 draft: false

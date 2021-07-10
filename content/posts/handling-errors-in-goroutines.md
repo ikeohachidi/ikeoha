@@ -1,5 +1,6 @@
 ---
 title: Handling errors in Goroutines
+description: He who fears death will never do anything worth of a man who is alive.
 tags:
   - go
   - concurrency

@@ -1,5 +1,6 @@
 ---
 title: "Elixir Notes: My majestic entrance into Elixir's Phoenix framework"
+description: Obula chyse
 tags:
   - Elixir
 date: 2020-11-23T12:04:28.901Z
