@@ -10,12 +10,13 @@ fields:
   config:
     required: false
   label: Description
-- type: list
-  name: tags
-  label: tags
 - type: datetime
   name: date
   label: date
 - type: boolean
   name: draft
   label: draft
+- name: tags
+  type: tag_list
+  default: []
+  label: tags
