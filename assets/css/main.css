@@ -46,3 +46,7 @@ li {
 .nuxt-content p {
     @apply my-3;
 }
+
+.nuxt-content a {
+  @apply underline text-gray-700;
+}

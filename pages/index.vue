@@ -13,8 +13,14 @@
     <div class="page-width mx-auto mt-20">
       <h6 class="font-bold text-lg mb-3">Get in touch</h6>
       <p>
-        I can be found on twitter @ikeoha_chidi on twitter @ikeohachidi. Generally speaking if i’m going to be on any social platform that’ll be my username. That’s if it’s not an imposter. Feel free to reach out.
+        I can be found on twitter <a href="https://twitter.com/ikeohachidi" target="_blank">@ikeoha_chidi</a> on Github <a href="https://github.com/ikeohachidi" target="_blank">@ikeohachidi</a>. Generally speaking if i’m going to be on any social platform that’ll be my username. That’s if it’s not an imposter. Feel free to reach out.
       </p>
     </div>
   </section>
 </template>
+
+<style scoped>
+a {
+  @apply underline text-gray-700;
+}
+</style>
