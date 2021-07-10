@@ -9,15 +9,7 @@ sections:
   label: Posts
   create: documents
   match: "**/*"
-  new_doc_ext: ''
-  templates:
-  - blog-post
-- type: directory
-  path: "./content"
-  label: Content
-  create: all
-  match: "**/*"
-  new_doc_ext: md
+  new_doc_ext: app
   templates:
   - blog-post
 upload_dir: uploads
