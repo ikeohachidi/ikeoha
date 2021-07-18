@@ -21,4 +21,4 @@ fields:
   default: []
   label: tags
 pages:
-- content/posts/building-chapi-part-1.app
+- content/posts/building-chapi-part-1.md
