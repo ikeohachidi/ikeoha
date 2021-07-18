@@ -20,3 +20,5 @@ fields:
   type: tag_list
   default: []
   label: tags
+pages:
+- content/posts/building-chapi-part-1.app
