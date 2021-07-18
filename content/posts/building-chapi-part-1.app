@@ -4,7 +4,7 @@ tags:
 title: Building Chapi Part(1)
 description: Man suffers more in his imagination
 date: 2021-07-06T23:00:00Z
-draft: true
+draft: false
 
 ---
 Honestly this shouldn't be part 1 as there might never even be a part 2 but who knows. 
