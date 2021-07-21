@@ -43,6 +43,10 @@ li {
     @apply mt-8 mb-2;
 }
 
+.nuxt-content ul {
+    @apply pl-4 list-disc;
+}
+
 .nuxt-content p {
     @apply my-3;
 }
