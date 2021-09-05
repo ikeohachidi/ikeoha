@@ -21,4 +21,5 @@ fields:
   default: []
   label: tags
 pages:
+- content/posts/an-experience-with-go-s-sql.scanner-interface.md
 - content/posts/building-chapi-part-1.md
