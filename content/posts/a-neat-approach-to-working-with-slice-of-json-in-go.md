@@ -24,6 +24,7 @@ Using in a select statement
 
 So you can simply implement your `sql.scanner` interface now
 E.g
+
 ```Go
 type People Person[]
 
@@ -38,3 +39,5 @@ func(pe *Person) Scan(src interface{}) (err error) {
 	return nil
 }
 ```
+
+If you find any issues with what i've written email me @ ikeohachidi@gmail.com
