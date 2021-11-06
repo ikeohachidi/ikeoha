@@ -4,7 +4,7 @@ tags:
 - " sql"
 title: An experience with Go's sql.Scanner interface
 description: Disturbance comes only from within, from our own perceptions
-date: 
+date: 2021-09-05T23:00:00Z
 draft: false
 
 ---
