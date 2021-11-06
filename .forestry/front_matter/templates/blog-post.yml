@@ -21,5 +21,6 @@ fields:
   default: []
   label: tags
 pages:
+- content/posts/a-neat-approach-to-working-with-slice-of-json-in-go.md
 - content/posts/an-experience-with-go-s-sql.scanner-interface.md
 - content/posts/building-chapi-part-1.md
