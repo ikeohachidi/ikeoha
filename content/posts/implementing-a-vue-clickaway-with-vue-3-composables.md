@@ -68,6 +68,6 @@ const isElementChild = (target: Element, element: Element): boolean => {
 
 	return false;
 }
-```typescript
+```
 
 Here with the `isElementChild` function we are recursively going throught the tree nodes of the parent element and checking if the clicked node exists within it. The obvious downfall to this being that it's recursive so for a very large DOM node there'd be a performance hit.
