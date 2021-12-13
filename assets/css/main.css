@@ -23,7 +23,6 @@ h5 {
 }
 
 p,
-span,
 ul,
 li {
     font-family: 'ibm plex sans', sans-serif;
@@ -41,6 +40,18 @@ li {
 .nuxt-content h5,
 .nuxt-content h6 {
     @apply mt-8 mb-2;
+}
+
+p code {
+    @apply font-mono inline-block text-gray-900 bg-gray-200 px-2 rounded-md;
+}
+
+pre, code, code .token {
+    @apply font-mono;
+}
+
+pre {
+    @apply border border-gray-300 rounded-md;
 }
 
 .nuxt-content ul {
