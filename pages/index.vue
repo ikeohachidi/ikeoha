@@ -6,7 +6,7 @@
       <h1 class="mb-8 text-3xl font-bold">Hey I'm Chidi</h1>
       <p>
         I’m a software developer and a writer. I’m still working hard on the writing part.<br>
-        I do fullstack web development mainly with Vuejs on the frontend and Golang on the backend. I’ve written some open source projects mostly with ideas mostly coming from my own problems I’m trying to solve or did solve and now want to share with others.
+        I do fullstack web development mainly with Vuejs on the frontend and Golang on the backend. I’ve written some open source projects mostly with ideas mostly coming from my own problems, the problems my pals face or just curiousity.
       </p>
     </div>
 
