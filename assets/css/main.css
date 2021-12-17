@@ -53,7 +53,7 @@ p code {
 }
 
 pre, code, code .token {
-    @apply font-mono;
+    @apply font-mono text-sm;
 }
 
 pre {
