@@ -3,7 +3,7 @@
         <div class="bg-dark">
             <Navbar/>
             <div class="page-width mx-auto mt-20 pb-20">
-                <h1 class="text-2xl font-bold">{{ post.title }}</h1>
+                <h1 class="text-3xl font-bold">{{ post.title }}</h1>
                 <p class="mt-4 text-gray-200">{{ post.description }}</p>
             </div>
         </div>

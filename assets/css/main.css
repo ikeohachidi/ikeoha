@@ -1,6 +1,6 @@
 html {
     --bg-primary: #f0f0ef;
-    --bg-dark: #1c1b1b;
+    --bg-dark: #2b2929;
 }
 
 body {
@@ -13,19 +13,25 @@ body {
     color: #fff;
 }
 
+strong {
+    @apply font-bold;
+}
+
 h1,
 h2,
 h3,
 h4,
-h5 {
-    font-family: 'Space Grotesk', sans-serif;
+h5,
+h6 {
+    font-family: 'Public Sans', sans-serif;
     font-weight: 700;
 }
 
 p,
 ul,
 li {
-    font-family: 'ibm plex sans', sans-serif;
+    font-family: 'Public Sans', sans-serif;
+    font-weight: 300;
     @apply leading-7;
 }
 
