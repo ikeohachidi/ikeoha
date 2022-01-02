@@ -24,5 +24,6 @@ pages:
 - content/posts/a-neat-approach-to-working-with-slice-of-json-in-go.md
 - content/posts/an-experience-with-go-s-sql.scanner-interface.md
 - content/posts/building-chapi-part-1.md
+- content/posts/enhancing-static-assets-load-time-on-my-app.md
 - content/posts/implementing-a-vue-clickaway-with-vue-3-composables.md
 - content/posts/the-need-for-a-css-library.md
