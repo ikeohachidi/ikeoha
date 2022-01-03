@@ -10,9 +10,9 @@ draft: false
 ---
 Some information before we move on. My app is [chapi](https://chapihq.com "Chapi"), the frontend is built with Vue with tailwind for styling and the server is written in Go.
 
-The entire Javascript bundle is compiled with the Go server, which make the entire app to be able to run as a single binary.
+The entire Javascript bundle is compiled with the Go server, so i can run the entire app as a single binary.
 
-When i pushed it to a production environment the static assets took an incredible amount of time to load, sometimes taking as far as 5 - 6 seconds, this is where my journey into increasing the performance of the app began.
+When i pushed it to a production environment the static assets took an incredible amount of time to load, sometimes taking as long as 5 - 6 seconds, this is where my journey into increasing the performance of the app began.
 
 First tailwind. Tailwind is large but it also provides purging, basically a way to remove the css classes you're not using in your app. Without configuring purging my CSS bundle was a massive `3000+kb` and with purging it dropped to `100+kb`(Not fantastic, but not `3MB`). This small step offered significant improvement but i was curious to know how far i could push this.
 
