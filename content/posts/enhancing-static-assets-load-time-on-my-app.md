@@ -5,7 +5,7 @@ tags:
 title: Enhancing static assets load time on my app
 description: Time is a river, glimpsed once and carried past
 date: 2022-01-01T23:00:00.000+00:00
-draft: true
+draft: false
 
 ---
 Some information before we move on. My app is [chapi](https://chapihq.com "Chapi"), the frontend is built with Vue with tailwind for styling and the server is written in Go.
