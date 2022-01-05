@@ -2,7 +2,7 @@
     <ul class="page-width mx-auto">
         <li><nuxt-link to="/">ikeoha.com</nuxt-link></li>
         <li><nuxt-link to="/post">posts</nuxt-link></li>
-        <li><nuxt-link to="/projects">projects</nuxt-link></li>
+        <li><a href="https://github.com/ikeohachidi" target="_blank">projects</a></li>
     </ul>
 </template>
 
