@@ -31,7 +31,6 @@ p,
 ul,
 li {
     font-family: 'Public Sans', sans-serif;
-    font-weight: 300;
     @apply leading-7;
 }
 
