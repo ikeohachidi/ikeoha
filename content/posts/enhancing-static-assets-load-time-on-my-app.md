@@ -2,7 +2,7 @@
 tags:
 - go
 - nginx
-title: Improving static assets load time on my app
+title: Improving static assets load time on my app, Chapi
 description: Time is a river, glimpsed once and carried past
 date: 2022-01-01T23:00:00.000+00:00
 draft: false
@@ -12,9 +12,9 @@ Some information before we move on. My app is [chapi](https://chapihq.com "Chapi
 
 The entire Javascript bundle is compiled with the Go server, so i can run the entire app as a single binary.
 
-When i pushed it to a production environment the static assets took an incredible amount of time to load, sometimes taking as long as 5 - 6 seconds, this is where my journey into increasing the performance of the app began.
+When i pushed it to a production environment the static assets took an incredible amount of time to load, sometimes taking as long as five or six seconds; this is where my journey into increasing the performance of the app began.
 
-First tailwind. Tailwind is large but it also provides purging, basically a way to remove the css classes you're not using in your app. Without configuring purging my CSS bundle was a massive `3000+kb` and with purging it dropped to `100+kb`(Not fantastic, but not `3MB`). This small step offered significant improvement but i was curious to know how far i could push this.
+First tailwind. Tailwind is large but it also provides purging, basically a way to remove the css classes you're not using in your app. Without configuring purging my CSS bundle was a massive `3000+kilobyes` and with purging it dropped to `100+kilobytes`(Not fantastic perhaps, but much better than `3MB`). This small step offered significant improvement but i was curious to know how far i could push this.
 
 I stumbled upon `Cache-Control` header on [MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching).
 
@@ -43,17 +43,19 @@ This would be enough but i run an Nginx server in front of my Go server. So foll
     		proxy_cache nginx_cache;
     		proxy_cache_revalidate on;
     		proxy_cache_use_stale error timeout http_500 http_502 http_503 http_504;
+            proxy_pass http://localhost:5000;
        }
        
     }
 
 The Nginx article goes into greater detail about what the `proxy_*` directives do. But to summarize what the Nginx configuration does:
 
-- `proxy_cache_path` sets the location of the cache on the machine.
-- `proxy_cache` sets the cache to use
-- `proxy_cache_revalidate` This revalidates the assets agains the origin server if the asset has become stale
-- `proxy_cache_use_stale` Returns the cached file if the origin server returns a specified `5**` error.
+* `proxy_cache_path` sets the location of the cache on the machine.
+* `proxy_cache` sets the cache to use
+* `proxy_cache_revalidate` This revalidates the asset against the origin server if the asset has become stale
+* `proxy_cache_use_stale` Returns the cached file if the origin server returns a specified `5**` error.
+* `proxy_pass` proxies requests from the listened port to the provided port
 
 **NOTE** The `proxy_cache_use_stale` was a bit of a controversial decision tbh. See the files built with VueJS are always hashed, e.g `dashboard-<random string>.js`. And on every new build the js file for dashboard will change but the browser will still receive the old content because of this. I still took the tradeoff though because the Frontend has come to a stable version and the `max-age` set on `Cache-Control` it'll get revalidated and then updated every 24 hrs.
 
-And that's that! With these changes i was able to get a significant performance boost.
+And that's that! With these changes i was able to see some really good improvements on my app.
