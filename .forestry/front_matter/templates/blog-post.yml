@@ -22,6 +22,7 @@ fields:
   label: tags
 pages:
 - content/posts/a-neat-approach-to-working-with-slice-of-json-in-go.md
+- content/posts/a-reason-for-pubsub-in-vue-ornament-vlog.md
 - content/posts/an-experience-with-go-s-sql.scanner-interface.md
 - content/posts/building-chapi-part-1.md
 - content/posts/enhancing-static-assets-load-time-on-my-app.md
