@@ -15,7 +15,8 @@
     "core-js": "^3.15.1",
     "dayjs": "^1.10.5",
     "nuxt": "^2.15.7",
-    "prism-material-themes": "^1.0.4"
+    "prism-material-themes": "^1.0.4",
+    "remixicon": "^2.5.0"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.14.7",
