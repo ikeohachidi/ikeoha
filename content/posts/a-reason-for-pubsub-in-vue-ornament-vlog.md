@@ -18,54 +18,52 @@ See it's important to emit some events from the component to allow the user take
 
 **Example**
 The developer supplies the following array
-```
-const menu = [
-	{	text: 'User',
-     	children: [
-        	{ text: 'Delete }, // this child node can still have children too
-            { text: 'Edit } // this child node can still have children too
-        ]
-    },
-    {	text: 'Settings',
-     	children: [
-        	{ text: 'Auth }, // this child node can still have children too
-            { text: 'Profile } // this child node can still have children too
-        ]
-    }
-]
-```
+
+    const menu = [
+    	{	text: 'User',
+         	children: [
+            	{ text: 'Delete }, // this child node can still have children too
+                { text: 'Edit } // this child node can still have children too
+            ]
+        },
+        {	text: 'Settings',
+         	children: [
+            	{ text: 'Auth }, // this child node can still have children too
+                { text: 'Profile } // this child node can still have children too
+            ]
+        }
+    ]
 
 Then the `menu` variable above is used to create the UI component on the screen when the developer does the following:
-```
-<or-vertical-menu :menu="menu"/>
-```
+
+    <or-vertical-menu :menu="menu"/>
 
 Under the hood the component recursively goes through the `menu` structure and creates something similar to this:
-```
-<or-vertical-menu>
-  <node>
-  	<node>
-  	<node>
-  <node/>
-  
-  <node>
-    <node>
-    <node/>
-  <node/>
-<or-vertical-menu/>
-```
+
+    <or-vertical-menu>
+      <node>
+      	<node>
+      	<node>
+      <node/>
+      
+      <node>
+        <node>
+        <node/>
+      <node/>
+    <or-vertical-menu/>
 
 At each node there will be an event `node-click` that gets emitted when that node is clicked and that event can be consumed by the developer to perform some action.
 The problem is when a `node` that is 5 levels deep gets clicked it'll have to recursively go up it's tree 5 times and each step of the way it'll fire the `node-click` for each node. This i imagine would be a pain to debug and it'll totally mess up my `vue-devtools`.
-So here comes pubsub to the rescue. Code [here](https://github.com/ikeohachidi/ornament-ui/blob/main/src/utilities/use-shared-event.ts).
 
 In short PubSub is short for publish subscribe. Basically, Somewhere there's something listening for an event(subscriber) and when the event goes off(published) the listener performs some action.
 So i just had to subscribe to my event in the top layer of my `vertical-menu` and then any child node that publishes an event goes directly to my subscriber and not up the tree first.
 
 #### Implementaion
+
 **Full code here**: [use-shared-event](https://github.com/ikeohachidi/ornament-ui/blob/main/src/utilities/use-shared-event.ts)
 
 A simple pubsub API api would look something like this:
+
 ```javascript
 // subscriber
 emit(<event>).listen(callback)
@@ -73,14 +71,16 @@ emit(<event>).listen(callback)
 // publisher
 emit(<event>).push(value)
 ```
+
 **NOTE** `<event>` is used as a placeholder for an event name.
 So how is this really implemented? Under the hood we'll create an `events` which takes an array of objects. Each key in the object would be the name of the event and the value would be an array of functions.
-```
-const events = {
-	likePicture: [Function, Function, Function]
-}
-```
+
+    const events = {
+    	likePicture: [Function, Function, Function]
+    }
+
 When a user runs `emit(<event>).listen(callback)` we check if there's a key corresponding that `<event>` name in our `events` array. If there isn't then we initialize the object with the `<event>` as the key and a value of `[Function]`. Functions are first class values in javascript so they can be passed around.
+
 ```javascript
 // code cut for brevity
 listen(callback) {
@@ -90,6 +90,7 @@ listen(callback) {
 ```
 
 When a user finally hits `emit(<event>).push(value)`, we simply simple get the `<event>` array from `event` with `events[<event>]`, iterate over it and then fun the callback functions passing the `value` as the argument to the `callback`.
+
 ```javascript
 // code cut for brevity
 push(value) {
