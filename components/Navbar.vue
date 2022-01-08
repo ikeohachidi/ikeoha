@@ -28,7 +28,7 @@ export default {
 
 <style lang="postcss" scoped>
 ul {
-    @apply flex py-4;
+    @apply flex py-4 flex-wrap;
 }
 
 ul li:first-of-type {
