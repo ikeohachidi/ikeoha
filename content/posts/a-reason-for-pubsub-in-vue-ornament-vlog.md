@@ -74,11 +74,11 @@ emit(<event>).push(value)
 
 **NOTE** `<event>` is used as a placeholder for an event name.
 So how is this really implemented? Under the hood we'll create an `events` which takes an array of objects. Each key in the object would be the name of the event and the value would be an array of functions.
-
-    const events = {
-    	<event>: [Function, Function, Function]
-    }
-
+```
+const events = {
+	<event> [Function, Function, Function]
+}
+```
 When a user runs `emit(<event>).listen(callback)` we check if there's a key corresponding that `<event>` name in our `events` array. If there isn't then we initialize the object with the `<event>` as the key and a value of `[Function]`. Functions are first class values in javascript so they can be passed around.
 
 ```javascript
