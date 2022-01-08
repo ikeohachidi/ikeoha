@@ -2,13 +2,13 @@
 tags:
 - typescript
 - javascript
-title: A reason for pubsub in Vue (Ornament Vlog)
+title: A reason for pubsub in Vue - Ornament Blog
 description: Breathe consistently
 date: 2022-01-07T23:00:00Z
 draft: false
 
 ---
-**NOTE** I only explain the implementaiton details of pub in javascript and don't go full into code
+**NOTE** I only explain the implementaiton details(more like pseudo code) of pubsub in javascript and don't go full into code tutorial. The actual code can be found here [use-shared-event](https://github.com/ikeohachidi/ornament-ui/blob/main/src/utilities/use-shared-event.ts).
 
 Yes, still on my Vue 3 component library project [Ornament](https://github.com/ikeohachidi/ornament-ui). Before i begin i should say hobby projects are the best. They push you to get in depth knowledge of the thing you're building and the tools you've decided to build it with.
 
@@ -54,6 +54,7 @@ Under the hood the component recursively goes through the `menu` structure and c
   <or-vertical-menu/>
 <or-vertical-menu/>
 ```
-And this can go as deep as possible. So the challenge is how do i push up the event for the developer consuming the component to listen to it. One approach would be to listen to the event on a node and keep recursively emitt it to all parent nodes. But i don't like that, it'll pollute my `vue-devtools` inspector. So i went with implementing my own pubsub.
+And this can go as deep as possible. So the challenge is how do i push up the event for the developer consuming the component to listen to it. One approach would be to listen to the event on a node and keep recursively emitting it to all parent nodes. But i don't like that, it'll pollute my `vue-devtools` inspector. So i went with implementing my own pubsub. Code [here](https://github.com/ikeohachidi/ornament-ui/blob/main/src/utilities/use-shared-event.ts).
 
-PubSub is something i've heard of and got the idea of but never really had a reason to use in a project.
+PubSub is short for publish subscribe. Somewhere there's something listening for the event(subscriber) and when the event goes off(published) the listener performs some action.
+So i just had to subscribe to my event in the top layer of my `vertical-menu` and then all children nodes can pubslish events, and once that happens the subscriber gets it. So with this approach i completely removed the recursive emission.
