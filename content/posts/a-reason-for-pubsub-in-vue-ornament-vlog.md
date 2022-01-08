@@ -63,6 +63,8 @@ In short PubSub is short for publish subscribe. Basically, Somewhere there's som
 So i just had to subscribe to my event in the top layer of my `vertical-menu` and then any child node that publishes an event goes directly to my subscriber and not up the tree first.
 
 #### Implementaion
+**Full code here**: [use-shared-event](https://github.com/ikeohachidi/ornament-ui/blob/main/src/utilities/use-shared-event.ts)
+
 A simple pubsub API api would look something like this:
 ```javascript
 // subscriber
