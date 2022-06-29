@@ -5,7 +5,7 @@ tags:
 - " responsive"
 title: Towards understanding CSS media queries
 description: Your progress is probably on the other side of the work you're avoiding
-date: 2022-06-29T07:00:00Z
+date: 2022-06-30T06:19:00Z
 draft: false
 
 ---
@@ -15,7 +15,7 @@ draft: false
 
 The CSS rules are applied if a screen is **greater or equal** to the specified size.
 E.g: Given the CSS style rule
-```
+```css
  @media (min-width: 360px) {
  	div#okay {
  		border: 1px solid blue;
@@ -32,7 +32,7 @@ So visually it can be seen as
 
 The CSS rules are applied when a screen is at **lesser or equal** to the specified size.
 E.g: Given the CSS style rule
-```
+```css
 @media (max-width: 360px) {
 	div#okay {
 		border: 1px solid blue;
@@ -42,7 +42,7 @@ E.g: Given the CSS style rule
 
 The above style will only be applied until the screen the reaches the specified width.
 This can be visually represented as:
-```
+```css
 0px <---------------|360px|---------------->
 	   Applied		 	      Not Applied
 ```
@@ -58,7 +58,7 @@ This can be visually represented as:
 `min-width` is used when doing **mobile-first** styling while `max-width` is used for \`desktop-first**.
 
 To further explain this take the following style rules:
-```
+```css
 p {
   color: blue;
 }
@@ -71,7 +71,7 @@ p {
 ```
 
 This can be visually represented as:
-```
+```css
 0px <---------------|360px|---------------->
 color: blue		 	  color: red
 ```
@@ -79,7 +79,7 @@ color: blue		 	  color: red
 This would be considered a `mobile-first` approach because the default style of the `p` tag is only applied when the screen is small and changes once the increases in size towards a large(desktop) screen.
     
 Now alternatively consider this style rule:
-```
+```css
 p {
 	color: blue;
 }
@@ -91,7 +91,7 @@ p {
 }
 ```
 This can be visually represented as:
-```
+```css
 0px <---------------|360px|---------------->
 	   color: red		 	  color: blue
 ```
