@@ -1,7 +1,7 @@
 ---
 tags:
 - CSS
-- " media queries"
+- "media queries"
 - " responsive"
 title: Towards understanding CSS media queries
 description: Your progress is probably on the other side of the work you're avoiding
@@ -24,7 +24,7 @@ E.g: Given the CSS style rule
 ```
 The above style will only be applied to `#okay` if the screen is **greater or equal** to `360px`.
 So visually it can be seen as
-```
+```css
 0px <---------------|360px|---------------->
 	   Not applied		 	    Applied
 ```
