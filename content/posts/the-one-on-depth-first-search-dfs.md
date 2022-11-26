@@ -5,7 +5,7 @@ tags:
 title: The one on Depth First Search (DFS)
 description: As you are, so i once was. As i am, so you will be.
 date: 2022-11-25T23:00:00Z
-draft: true
+draft: false
 
 ---
 Not that you care but for the 0 number of you that visit this blog, I recently got into doing DSAs again, why? I think it helps with critical thinking and it keeps the complex problem engines turning and I'm toilet at it.
