@@ -6,6 +6,8 @@ html {
 body {
     background-color: var(--bg-primary);
     border-top: 13px solid var(--bg-dark);
+    font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
+    font-weight: normal;
 }
 
 .bg-dark {
@@ -23,7 +25,6 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Public Sans', sans-serif;
     font-weight: 700;
 }
 
@@ -50,7 +51,6 @@ h5 {
 p,
 ul,
 li {
-    font-family: 'Public Sans', sans-serif;
     @apply leading-7;
 }
 
