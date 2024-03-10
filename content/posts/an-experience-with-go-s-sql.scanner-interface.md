@@ -34,7 +34,7 @@ An sql `JOIN` is a very sane way to accomplish this.
 
 So using the `JOIN` i got the result (**NOTE: some columns of result reduced for brevity**):
 
-![](/uploads/screenshot-from-2021-09-05-12-01-47.png)
+![](/screenshot-from-2021-09-05-12-01-47.png)
 
 If i used a library like GORM it would actually automatically marshal the values properly. But see i didn't want to use GORM because beside this being a passion project it is also a learning experience for me. So i decided not to use any ORM and write as much SQL as needed.
 
@@ -65,7 +65,7 @@ After digging around the internet and PostgreSQL docs i was able to write a sens
 
 The query returns this:
 
-![](/uploads/screenshot-from-2021-09-05-12-31-16.png)
+![](/screenshot-from-2021-09-05-12-31-16.png)
 
 Notice the `queries` column now returns an array array of json objects. That's what line 2 does `json_build_object` creates a json object and `array_agg` is an aggregate function to put them all in an array... mad!!!
 

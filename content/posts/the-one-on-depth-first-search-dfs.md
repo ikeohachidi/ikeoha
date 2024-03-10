@@ -20,7 +20,7 @@ Breadth first search can be used to solve tree problems. It allows all leaves at
 
 So given the binary tree:
 
-![](/uploads/screenshot-from-2022-11-26-23-36-18.png)
+![](/screenshot-from-2022-11-26-23-36-18.png)
 
 We need to find the average of numbers at each level. Which is the summation of nodes divided by number of nodes at the level.
 
