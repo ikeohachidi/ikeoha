@@ -6,7 +6,7 @@ tags:
 title: Towards understanding CSS media queries
 description: Your progress is probably on the other side of the work you're avoiding
 date: 2022-06-30T06:19:00Z
-draft: false
+draft: true
 
 ---
 ## Honestly, it's just about min-width and max-width
