@@ -7,6 +7,8 @@ date: 2024-08-05T23:00:00Z
 draft: false
 
 ---
+This is part of an exercise I want to do where i think about the design decisions made by software engineers when creating features.
+
 ### Considerations
 - A user can login into spotify on multiple devices
 - If a user is playing a track on their browser this track and it's currently seeked position should be synced across multiple devices
