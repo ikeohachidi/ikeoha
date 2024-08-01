@@ -2,7 +2,7 @@
     <ul class="page-width mx-auto">
         <li><nuxt-link to="/">ikeoha.com</nuxt-link></li>
         <li><nuxt-link to="/post">posts</nuxt-link></li>
-        <li><a href="https://github.com/ikeohachidi" target="_blank">projects</a></li>
+        <li><nuxt-link to="/projects">projects</nuxt-link></li>
 
         <li class="ml-auto" @click="goToExternalPage('github')">
             <i class="ri-github-fill ri-lg"></i>
@@ -33,7 +33,7 @@ ul {
 
 ul li:first-of-type {
     @apply font-bold pl-0 pr-4;
-} 
+}
 
 ul li {
     @apply px-4 flex items-center cursor-pointer;;
